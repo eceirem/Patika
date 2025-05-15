@@ -1,0 +1,57 @@
+Proje 2
+🔄 Merge Sort - Aşamalar
+Verilen dizi:
+[16, 21, 11, 8, 12, 22]
+
+1. Dizi Bölünür (Recursive olarak ikiye ayrılır):
+[16, 21, 11, 8, 12, 22]
+→ [16, 21, 11] ve [8, 12, 22]
+Devam edelim: (birer elaman kalana kadar devam eder)
+
+[16, 21, 11] → böl:
+→ [16] ve [21, 11] (2 elemanlı diziyi de böl)
+→ [21, 11] → [21] ve [11]
+
+Şimdi küçükleri birleştiriyoruz karşılaştırarak(merge):
+
+→ [21] + [11] → karşılaştır → [11, 21]
+→ [16] + [11, 21] → 16 < 11 değil → [11, 16, 21]
+
+---------------------
+Şimdi diğer yarısı: 
+
+[8, 12, 22] → böl:
+→ [8] ve [12, 22]
+→ [12, 22] → [12] ve [22]
+
+Şimdi bunları da birleştirelim:
+
+→ [12] + [22] → [12, 22]
+→ [8] + [12, 22] → 8 < 12 → [8, 12, 22]
+
+2. Son Aşama: İki büyük sıralanmış parçayı birleştirme
+→ [11, 16, 21] ve [8, 12, 22]
+
+Karşılaştırarak birleştir:
+
+8 < 11 → [8]
+
+11 < 12 → [8, 11]
+
+12 < 16 → [8, 11, 12]
+
+16 < 22 → [8, 11, 12, 16]
+
+21 < 22 → [8, 11, 12, 16, 21]
+
+Son kalan 22 → [8, 11, 12, 16, 21, 22]
+
+✅ Sıralanmış dizi: [8, 11, 12, 16, 21, 22]
+
+📊 Big-O Gösterimi (Merge Sort)
+Merge Sort her zaman diziyi log₂(n) kadar böler ve her seviyede n kadar işlem yapar. Bu nedenle:
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n log n)
+👉 Yani Merge Sort’un her durumda çalışma zamanı:
+✅ O(n log n)
