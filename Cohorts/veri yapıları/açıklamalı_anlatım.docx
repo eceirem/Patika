@@ -1,0 +1,96 @@
+🧩 Insertion Sort - Aşamalar
+Verilen dizi:
+[22, 27, 16, 2, 18, 6]
+
+Insertion Sort, diziyi soldan sağa gezer ve her elemanı kendinden önceki elemanlarla karşılaştırarak doğru yere "insert" eder.
+
+Adım 1: İlk eleman zaten sıralı kabul edilir.
+[22, 27, 16, 2, 18, 6]
+
+Adım 2: 27 doğru yerinde çünkü 27 > 22
+[22, 27, 16, 2, 18, 6]
+
+Adım 3: 16, 27’den küçük → 27 ile yer değiştirir 
+16 < 22 → yer değiştir.
+[22, 16, 27, 2, 18, 6]
+[16, 22, 27, 2, 18, 6]
+
+Adım 4: 2, 27’den küçük → yer değiştir
+[16, 22, 2, 27, 18, 6]
+2 < 22 → yer değiştir
+[16, 2, 22, 27, 18, 6]
+2 < 16 → yer değiştir
+[2, 16, 22, 27, 18, 6]
+
+Adım 5: 18, 27’den küçük → yer değiştir
+[2, 16, 22, 18, 27, 6]
+18 < 22 → yer değiştir
+[2, 16, 18, 22, 27, 6]
+
+Adım 6: 6, 27’den küçük → yer değiştir
+[2, 16, 18, 22, 6, 27]
+6 < 22 → yer değiştir
+[2, 16, 18, 6, 22, 27]
+6 < 18 → yer değiştir
+[2, 16, 6, 18, 22, 27]
+6 < 16 → yer değiştir
+[2, 6, 16, 18, 22, 27]
+
+✅ Sıralanmış dizi:
+[2, 6, 16, 18, 22, 27]
+
+📊 Big-O Gösterimi (Worst Case)
+Best case: Dizi zaten sıralı → sadece karşılaştırmalar yapılır → O(n)
+Average case: Rastgele bir dizi → O(n²)
+Worst case: Dizi tamamen ters sıralı → O(n²)
+Burada genel Big-O:
+👉 O(n²)
+
+❓ Time Complexity - 18 sayısı hangi case?
+Sıralanmış hali: [2, 6, 16, 18, 22, 27]
+
+18 sayısı ortada bulunduğundan:
+👉 Average Case kapsamına girer.
+
+🔄 Selection Sort
+Verilen dizi:
+[7, 3, 5, 8, 2, 9, 4, 15, 6]
+
+Selection Sort, her adımda en küçük elemanı bulur ve başa koyar.
+
+Adım 1: Tüm dizide en küçük eleman = 2
+2 ile 7 yer değiştirir:
+[2, 3, 5, 8, 7, 9, 4, 15, 6]
+
+Adım 2: Geriye kalan dizide (index 1'den itibaren) en küçük eleman = 3
+Zaten yerinde → değişiklik yok
+[2, 3, 5, 8, 7, 9, 4, 15, 6]
+
+Adım 3: Kalan dizide (index 2’den itibaren) en küçük = 4
+4 ile 5 yer değiştirir
+[2, 3, 4, 8, 7, 9, 5, 15, 6]
+
+Adım 4: Kalan dizide (index 3’ten itibaren) en küçük = 5
+5 ile 8 yer değiştirir
+[2, 3, 4, 5, 7, 9, 8, 15, 6]
+
+Adım 5: Kalan dizide (index 4’ten itibaren) en küçük = 6
+6 ile 7 yer değiştirir
+[2, 3, 4, 5, 6, 9, 8, 15, 7]
+
+Adım 6: Kalan dizide (index 5’ten itibaren) en küçük = 7
+7 ile 9 yer değiştirir
+[2, 3, 4, 5, 6, 7, 8, 15, 9]
+
+Adım 7: Kalan dizide (index 6’dan itibaren) en küçük = 8
+yer değiştirme yok 
+[2, 3, 4, 5, 6, 7, 8, 15, 9]
+
+Adım 8: Kalan dizide (index 7’den itibaren) en küçük = 9
+9 ile 15 yer değiştirir
+[2, 3, 4, 5, 6, 7, 8, 9, 15]
+
+Son elemana ulaştık durduk.
+
+✅ Sıralanmış dizi:
+[2, 3, 4, 5, 6, 7, 8, 9, 15]
