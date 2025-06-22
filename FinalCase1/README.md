@@ -34,6 +34,7 @@
 - Verinin dağılımı, yoğunlukları ve merkezi eğilimleri açık şekilde ortaya kondu.
 
 ## Memnuniyet İlişkileri İncelemesi
+
 - İki şekilde ele alındı:
 ### 1) Sayısal Değerler İle  Memnuniyet İlişkileri
 - Memnuniyet değişkeni kategorik (satisfied = 1 / neutral or dissatisfied = 0) olarak ikili sayısala dönüştürüldü.  
