@@ -1,0 +1,16 @@
+Dim_Date = ADDCOLUMNS (
+CALENDAR (MIN(users[BIRTHDATE]),MAX(users[BIRTHDATE])),
+"DateAsInteger", FORMAT ( [Date], "YYYYMMDD" ),
+"Year", YEAR ( [Date] ),
+"Monthnumber", FORMAT ( [Date], "MM" ),
+"YearMonthnumber", FORMAT ( [Date], "YYYY/MM" ),
+"YearMonthShort", FORMAT ( [Date], "YYYY/mmm" ),
+"MonthNameShort", FORMAT ( [Date], "mmm" ),
+"MonthNameLong", FORMAT ( [Date], "mmmm" ),
+"DayOfWeekNumber", WEEKDAY ( [Date],2 ),
+"WeekNumber", WEEKNUM ( [Date],2 ),
+"DayOfWeek", FORMAT ( [Date], "dddd" ),
+"DayOfWeekShort", FORMAT ( [Date], "ddd" ),
+"Quarter", "Q" & FORMAT ( [Date], "Q" ),
+"YearQuarter", FORMAT ( [Date], "YYYY" ) & "/Q" & FORMAT ( [Date], "Q" )
+)
